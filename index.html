@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA University</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">IA <span>UNIVERSITY</span></div>
+    <button class="chat-btn" onclick="openChat()">💬 Conversar com IA</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge">🎮 APRENDA • EXPLORE • EVOLUA</div>
+        <h1>O conhecimento<br><span>virou um mundo.</span></h1>
+        <p>Explore uma experiência de estudos gamificada e converse com uma inteligência artificial para aprender.</p>
+        <button class="primary" onclick="openWorld()">🌎 Entrar no Mundo 3D</button>
+      </div>
+      <div class="world-card" onclick="openWorld()">
+        <div class="planet">🌎</div>
+        <div class="card-label">MUNDO INTERATIVO</div>
+        <div class="card-title">Explore o conhecimento</div>
+      </div>
+    </section>
+
+    <section class="features">
+      <article><b>🎯 MISSÕES</b><p>Transforme seus estudos em desafios.</p></article>
+      <article><b>⚡ XP & NÍVEIS</b><p>Ganhe experiência enquanto aprende.</p></article>
+      <article><b>🤖 IA</b><p>Tire dúvidas e receba explicações.</p></article>
+    </section>
+  </main>
+
+  <div id="world" class="page hidden">
+    <button class="back" onclick="closeWorld()">← Voltar</button>
+    <div class="world-scene">
+      <div class="stars"></div>
+      <div class="globe">🌎</div>
+      <h2>MUNDO DO CONHECIMENTO</h2>
+      <p>Escolha uma área para começar sua jornada.</p>
+      <div class="zones">
+        <button>📐 Matemática</button>
+        <button>🧬 Biologia</button>
+        <button>⚛️ Física</button>
+        <button>🧪 Química</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="chat" class="chat hidden">
+    <div class="chat-box">
+      <div class="chat-head">🤖 IA University <button onclick="closeChat()">×</button></div>
+      <div id="messages" class="messages">
+        <div class="msg ai">Olá! 👋 Sou a IA University. O que você quer aprender?</div>
+      </div>
+      <form onsubmit="sendMessage(event)">
+        <input id="input" placeholder="Digite sua dúvida..." autocomplete="off">
+        <button>➤</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
